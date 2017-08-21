@@ -1,12 +1,24 @@
 .main-heading {
 	color: darkgray;
 	background-color: aliceblue;
+	text-align: center;
 }
 
 .letter-input {
-	background-color: aliceblue;
+	background-color: white;
 	color: darkgray;
-	padding: 100px;
+	padding: 100px, 20px;
+	float: left;
+	margin: 0;
+}
+
+.letters {
+	width: 60%;
+}
+
+.button2 {
+	width: 40%;
+	margin: 0px;
 }
 
 #hangman {
@@ -25,4 +37,5 @@
 #submit-button {
 	background-color: lightgray;
 	color: darkgray;
+	float: left;
 }
