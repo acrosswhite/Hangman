@@ -1,0 +1,28 @@
+.main-heading {
+	color: darkgray;
+	background-color: aliceblue;
+}
+
+.letter-input {
+	background-color: aliceblue;
+	color: darkgray;
+	padding: 100px;
+}
+
+#hangman {
+	padding: 50px;
+	letter-spacing: 7px;
+	background-color: aliceblue;
+	text-align: center;
+}
+
+#playgame {
+	background-color: honeydew;
+	color: darkgray;
+	border-color: darkgray;
+}
+
+#submit-button {
+	background-color: lightgray;
+	color: darkgray;
+}
