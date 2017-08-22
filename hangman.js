@@ -2,25 +2,27 @@ var gameWords = ["apple", "blueberry", "carrots", "jicama", "avocado", "bell pep
 var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 var numberOfTurns = 12
 var currentWord = gameWords[Math.floor(Math.random()*gameWords.length)];
-var displayWord = "";
+var displayWord = [];
 var remainingLetters = 0;
+
+
 //this should come from bootstrap text box input
 
 
 function runGame (){
 
-	//when play game is clicked needs to trigger runGame function
-	//runGame function should random generate a word and fill in number of blank spaces on page
-	//pause after this to wait for user selection
+//when play game is clicked needs to trigger runGame function
+//runGame function should random generate a word and fill in number of blank spaces on page
+//pause after this to wait for user selection
 
 
 	for (var i = 0; i < currentWord.length; i++) {
-		displayWord = displayWord + " _"
+		displayWord[i] = "_"
 	}
 
-	remainingLetters = displayWord.length;
+	remainingLetters = currentWord.length;
 
-	document.getElementById("hangman").innerHTML = displayWord;
+	document.getElementById("hangman").innerHTML = displayWord.join(" ");
 
 
 	console.log(currentWord);
@@ -29,7 +31,14 @@ function runGame (){
 
 }	
 
+
+//user input a number needs to trigger validation of character
+//show in html the game Word space
+//tell user if correct
+
+
 function submitGuess(){
+	var foundMatch = false;
 	var guess = document.getElementById("guess").value.toLowerCase();
 	
 	if(remainingLetters > 0){
@@ -39,34 +48,27 @@ function submitGuess(){
 		else if (alphabet.indexOf(guess) <= -1) {
 			alert("select a valid letter");
 		}
-		else if{
+		else {
 			for (var j = 0; j < currentWord.length; j++) {
 				if (guess === currentWord.charAt(j)){
-				displayWord = displayWord.split(" ");
+				displayWord[j] = guess;
 				remainingLetters --;
+				foundMatch = true;
 				console.log(displayWord);
-			document.getElementById("hangman").innerHTML = displayWord[j];
+			document.getElementById("hangman").innerHTML = displayWord.join(" ");
 				}
 			}
-		}
-		else {
+		if (foundMatch === false) {
 			alert("incorrect guess, please try again");
 			numberOfTurns --;
+			}
 		}
+
 	}
 }
-	//user input a number needs to trigger validation of character
-	//show in html the game Word space
-	//tell user if correct
 
-	/*if (userGuess === displayWord[]){
-		//display letter in game word space
-		document.write("correct! guess your next letter");
-	}
-	else {
-		numberOfTurns --
-		document.write("incorrect! guess again");
-	}
+
+
 
 	//once word is complete user score increase
 	//new game can be selected

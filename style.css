@@ -39,3 +39,8 @@
 	color: darkgray;
 	float: left;
 }
+
+/* move jumbotron to full row
+drop hangman box to middle of 2nd row
+move submit button to match row level of letter box
+build score tracker*/
