@@ -5,11 +5,12 @@
 }
 
 .letter-input {
-	background-color: white;
+	background-color: snow;
 	color: darkgray;
-	padding: 100px, 20px;
+	padding: 200px, 20px;
 	float: left;
 	margin: 0;
+	height: 250px;
 }
 
 .letters {
@@ -24,8 +25,9 @@
 #hangman {
 	padding: 50px;
 	letter-spacing: 7px;
-	background-color: aliceblue;
+	background-color: snow;
 	text-align: center;
+	height: 250px;
 }
 
 #playgame {
@@ -38,6 +40,17 @@
 	background-color: lightgray;
 	color: darkgray;
 	float: left;
+}
+
+#score-tracker {
+	background-color: snow;
+	color: darkgray;
+	height: 250px;
+
+}
+
+#score-title {
+	color: darkgray;
 }
 
 /* move jumbotron to full row

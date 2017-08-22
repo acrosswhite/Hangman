@@ -4,6 +4,8 @@ var numberOfTurns = 12
 var currentWord = gameWords[Math.floor(Math.random()*gameWords.length)];
 var displayWord = [];
 var remainingLetters = 0;
+var score = 0
+var wrongGuess =[];
 
 
 //this should come from bootstrap text box input
@@ -41,6 +43,7 @@ function submitGuess(){
 	var foundMatch = false;
 	var guess = document.getElementById("guess").value.toLowerCase();
 	
+
 	if(remainingLetters > 0){
 		if (guess.length !== 1){
 			alert("please enter one letter");
@@ -57,7 +60,12 @@ function submitGuess(){
 				console.log(displayWord);
 			document.getElementById("hangman").innerHTML = displayWord.join(" ");
 				}
+
 			}
+			wrongGuess.push(guess);
+			document.getElementById("letters-used").innerHTML = "Letters used: " + wrongGuess.join(" ");
+
+
 		if (foundMatch === false) {
 			alert("incorrect guess, please try again");
 			numberOfTurns --;
@@ -65,11 +73,18 @@ function submitGuess(){
 		}
 
 	}
+
+//once word is complete user score increase
+//new game can be selected
+//or if loser score not increase but play game again without losing score
+
+
+	if ((remainingLetters === 0) && (displayWord.join("") === currentWord)){
+		score ++;
+		document.getElementById("score-update").innerHTML = "Score: " + score;
+	}
 }
 
 
 
 
-	//once word is complete user score increase
-	//new game can be selected
-	//or if loser score not increase but play game again*/

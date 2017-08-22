@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="reset.css">
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="style.css">
@@ -14,29 +15,41 @@
 
 	
 	<div class="row one">
-  		<div class="col-xs-12 col-md-8 play">
+  		<div class="col-md-12 play">
   			<div class="jumbotron main-heading">
   			<h1>Hangman</h1>
   				<p>A classic game built in JavaScript</p>
   				<p><a class="btn btn-primary btn-lg" href="#" role="button" onclick="runGame()" id="playgame">Play Game</a></p>
 			</div>
   		</div>
-  		<div class="col-xs-6 col-md-4" id="hangman"></div>
 	</div>
 	
-	<div class="row two">
-  		<div class="col-xs-12 col-md-8 game-details letter-input">
-  		<!--<div class="row three">-->
-			<div class="col-md-8 input-group letters">
-			  <span class="input-group">Letter Select</span>
+	<div class="row two" id="two">
+  		<div class="col-md-4 game-details letter-input">
+			<div class="input-group letters">
+			  <span class="input-group"><h4>Letter Select</h4></span>
+			  <br>
 			  <input type="text" class="form-control" placeholder="Choose a Letter" aria-describedby="basic-addon1" id="guess">
 			</div>
-			<div class="col-md-4 button2">
+			<br>
+			<div class="button2">
 				<button type="button" class="btn btn-default" id="submit-button" onclick="submitGuess()">Guess</button>
 			</div>
   		</div>
-  		<!--</div>-->
-  		<div class="col-xs-6 col-md-4" id="score-tracker">.col-xs-6 .col-md-4</div>
+  		<div class="col-md-4" id="hangman"></div>
+  		<div class="col-md-4" id="score-tracker">
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h3 class="panel-title" id="score-title">Scoreboard</h3>
+			  </div>
+			  <div class="panel-body" id="score-update">
+			   <ul> Score: 0</ul>
+				<br>
+			    <ul id="letters-used">Letters used: </ul>
+			    <ul>Guesses left: 12</ul>
+			  </div>
+			</div>
+  		</div>
 	</div>
 
 
