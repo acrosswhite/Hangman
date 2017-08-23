@@ -1,10 +1,10 @@
 var gameWords = ["apple", "blueberry", "carrots", "jicama", "avocado", "bell pepper", "mango", "potato", "baby spinach", "yams"]
 var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-var numberOfTurns = 12
+var numberOfTurns = 2;
 var currentWord = gameWords[Math.floor(Math.random()*gameWords.length)];
 var displayWord = [];
 var remainingLetters = 0;
-var score = 0
+var score = 0;
 var wrongGuess =[];
 
 
@@ -12,6 +12,7 @@ var wrongGuess =[];
 
 
 function runGame (){
+	console.log("starting new game");
 
 //when play game is clicked needs to trigger runGame function
 //runGame function should random generate a word and fill in number of blank spaces on page
@@ -71,6 +72,16 @@ function submitGuess(){
 			numberOfTurns --;
 			}
 		}
+		document.getElementById("guesses-left").innerHTML = "Guesses Left: " + numberOfTurns;
+		if (numberOfTurns === 0){
+			alert("you ran out of turns! GAME OVER :o");
+			var playAgain = confirm("play again?");
+				if ( playAgain === true){
+					runGame();
+					//reset guesses left
+					//clear used letters
+				}
+		}
 
 	}
 
@@ -82,6 +93,7 @@ function submitGuess(){
 	if ((remainingLetters === 0) && (displayWord.join("") === currentWord)){
 		score ++;
 		document.getElementById("score-update").innerHTML = "Score: " + score;
+		prompt("Play again?" + runGame());
 	}
 }
 
