@@ -1,12 +1,12 @@
 .main-heading {
-	color: darkgray;
-	background-color: aliceblue;
+	color: deeppink;
+	background-color: white;
 	text-align: center;
 }
 
 .letter-input {
-	background-color: snow;
-	color: darkgray;
+	background-color: white;
+	color: darkgreen;
 	padding: 200px, 20px;
 	float: left;
 	margin: 0;
@@ -22,35 +22,51 @@
 	margin: 0px;
 }
 
+.veggies {
+	width: 50%;
+}
+
 #hangman {
 	padding: 50px;
 	letter-spacing: 7px;
-	background-color: snow;
+	background-color: white;
 	text-align: center;
 	height: 250px;
 }
 
 #playgame {
-	background-color: honeydew;
-	color: darkgray;
-	border-color: darkgray;
+	background-color: lemonchiffon;
+	color: deeppink;
+	border-color: deeppink;
 }
 
 #submit-button {
-	background-color: lightgray;
-	color: darkgray;
+	background-color: #c3e548;
+	color: darkgreen;
+	border-color: darkgreen;
 	float: left;
 }
 
+#guess {
+	border-color: darkgreen;
+}
+
 #score-tracker {
-	background-color: snow;
-	color: darkgray;
+	background-color: white;
+	color: darkgreen;
+	border-color: darkgreen;
 	height: 250px;
 
 }
 
+#score-heading {
+	background-color: #c3e548;
+	border-color: darkgreen;
+}
+
 #score-title {
-	color: darkgray;
+	color: darkgreen;
+	background-color: #c3e548;
 }
 
 /* move jumbotron to full row

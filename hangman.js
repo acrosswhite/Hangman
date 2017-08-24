@@ -1,4 +1,4 @@
-var gameWords = ["apple", "blueberry", "carrots", "jicama", "avocado", "bell pepper", "mango", "potato", "baby spinach", "yams"]
+var gameWords = ["apple", "blueberry", "carrots", "jicama", "avocado", "lemon", "mango", "potato", "artichoke", "yams"]
 var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 var numberOfTurns = 2;
 var currentWord = gameWords[Math.floor(Math.random()*gameWords.length)];
@@ -26,6 +26,8 @@ function runGame (){
 	remainingLetters = currentWord.length;
 
 	document.getElementById("hangman").innerHTML = displayWord.join(" ");
+	wrongGuess === [];
+	numberOfTurns === 2;
 
 
 	console.log(currentWord);
@@ -93,7 +95,11 @@ function submitGuess(){
 	if ((remainingLetters === 0) && (displayWord.join("") === currentWord)){
 		score ++;
 		document.getElementById("score-update").innerHTML = "Score: " + score;
-		prompt("Play again?" + runGame());
+		playagain = confirm("Play again?");
+		if(playAgain === true) {
+			runGame();
+
+		}
 	}
 }
 
