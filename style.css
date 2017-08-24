@@ -1,5 +1,5 @@
 .main-heading {
-	color: deeppink;
+	color: #ff4b78;
 	background-color: white;
 	text-align: center;
 }
@@ -32,12 +32,15 @@
 	background-color: white;
 	text-align: center;
 	height: 250px;
+	font-size: 18px;
+	font-weight: bolder;
+	color: darkgreen;
 }
 
 #playgame {
 	background-color: lemonchiffon;
-	color: deeppink;
-	border-color: deeppink;
+	color: #ff4b78;
+	border-color: #ff4b78;
 }
 
 #submit-button {
