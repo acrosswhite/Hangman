@@ -18,7 +18,8 @@
   		<div class="col-md-12 play">
   			<div class="jumbotron main-heading">
   			<h1>Hangman</h1>
-  				<p>A classic game built in JavaScript</p>
+  				<p><h3>A classic game built in JavaScript</h3></p>
+  				<p><h4>Guess a fruit or vegetable to win big!</h4></p>
   				<p><a class="btn btn-primary btn-lg" href="#" role="button" onclick="runGame()" id="playgame">Play Game</a></p>
 			</div>
   		</div>
@@ -36,13 +37,17 @@
 				<button type="button" class="btn btn-default" id="submit-button" onclick="submitGuess()">Guess</button>
 			</div>
   		</div>
-  		<div class="col-md-4" id="hangman"></div>
+  		<div class="col-md-4" id="hangman">
+  			<canvas id="canvas1" width="400px" height="300px" >
+				Your browser does not support HTML5 Canvas element
+			</canvas>
+  		</div>
   		<div class="col-md-4" id="score-tracker">
 			<div class="panel panel-default">
 			  <div class="panel-heading" id="score-heading">
 			    <h3 class="panel-title" id="score-title">Scoreboard</h3>
 			  </div>
-			  <div class="panel-body">
+			  <div class="panel-body" id="score-panel">
 			   <ul id="score-update"> Score: 0</ul>
 				<br>
 			    <ul id="letters-used">Letters used: </ul>

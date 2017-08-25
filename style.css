@@ -1,5 +1,5 @@
 .main-heading {
-	color: #ff4b78;
+	color: #a80057;
 	background-color: white;
 	text-align: center;
 }
@@ -39,8 +39,8 @@
 
 #playgame {
 	background-color: lemonchiffon;
-	color: #ff4b78;
-	border-color: #ff4b78;
+	color: #a80057;
+	border-color: #a80057;
 }
 
 #submit-button {
@@ -57,9 +57,12 @@
 #score-tracker {
 	background-color: white;
 	color: darkgreen;
-	border-color: darkgreen;
 	height: 250px;
 
+}
+
+.panel-default {
+	border-color: darkgreen;
 }
 
 #score-heading {
@@ -70,9 +73,9 @@
 #score-title {
 	color: darkgreen;
 	background-color: #c3e548;
+	border-color: darkgreen;
 }
 
-/* move jumbotron to full row
-drop hangman box to middle of 2nd row
-move submit button to match row level of letter box
-build score tracker*/
+#score-panel {
+	border-color: darkgreen;
+}
